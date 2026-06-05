@@ -38,7 +38,7 @@
     transition: background 0.4s, box-shadow 0.4s;
   }
   nav.scrolled {
-    background: rgba(253,246,227,0.95);
+    background: rgb(227 233 253 / 95%);
     backdrop-filter: blur(12px);
     box-shadow: 0 1px 0 var(--border);
   }
@@ -508,7 +508,7 @@
    }
     nav ul { display: none; flex-direction: column; align-items: center; gap: 15px;        bottom: -170px;
         border-radius: 30px;
-        padding: 20px; position: absolute;  right: -20px;    background: rgba(253, 246, 227, 0.95);
+        padding: 20px; position: absolute;  right: -20px;    background:rgb(227 233 253 / 95%);
     backdrop-filter: blur(12px);
     box-shadow: 0 1px 0 var(--border);}
     .hamburger { display: flex; }
