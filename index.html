@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DairyFresh — Farm to Table</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+<!-- NAV -->
+ <header class="navbar">
+<nav id="nav">
+       <a href="index.html" class="logo">
+    <div class="logo-icon">
+      <img src="product pics/ChatGPT Image Jun 5, 2026, 11_29_24 AM.png" alt="">
+    </div>
+  </a>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">Our Story</a></li>
+    <li><a href="#products" class="nav-cta">Shop</a></li>
+    <li><button class="nav-login" id="navLoginBtn" onclick="openAuth()">Login</button></li>
+  </ul>
+  <button class="hamburger" aria-label="Menu" onclick="showMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+</header>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-texture"></div>
+  <div class="hero-left">
+    <div class="hero-tag"><span></span> 100% Farm Fresh</div>
+    <h1>Pure Dairy,<br><em>Naturally</em><br>Delicious.</h1>
+    <p class="hero-desc">From our family farms to your table — fresh milk, artisan cheeses, creamy yogurts, and more. No additives, no shortcuts, just the real thing.</p>
+    <div class="hero-actions">
+      <a href="#products" class="btn-primary">Explore Products</a>
+      <a href="about.html" class="btn-ghost">Our Story <span class="arrow">→</span></a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-visual">
+      <img src="product pics/OIG3-fotor-bg-remover-2026060591858.png" alt="">
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">50+</div><div class="stat-label">Farm Partners</div></div>
+    <div class="stat"><div class="stat-num">12K+</div><div class="stat-label">Happy Customers</div></div>
+    <div class="stat"><div class="stat-num">Daily</div><div class="stat-label">Fresh Deliveries</div></div>
+    <div class="stat"><div class="stat-num">Zero</div><div class="stat-label">Preservatives</div></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track" id="marquee">
+    <div class="marquee-item">🥛 Fresh Milk <span class="marquee-dot"></span></div>
+    <div class="marquee-item">🧀 Artisan Cheese <span class="marquee-dot"></span></div>
+    <div class="marquee-item">🍦 Premium Ice Cream <span class="marquee-dot"></span></div>
+    <div class="marquee-item">🧈 Cultured Butter <span class="marquee-dot"></span></div>
+    <div class="marquee-item">🫙 Greek Yogurt <span class="marquee-dot"></span></div>
+    <div class="marquee-item">🥛 Organic Cream <span class="marquee-dot"></span></div>
+    <div class="marquee-item">🧀 Paneer <span class="marquee-dot"></span></div>
+    <div class="marquee-item">🍼 Baby Dairy <span class="marquee-dot"></span></div>
+    <div class="marquee-item">🥛 Fresh Milk <span class="marquee-dot"></span></div>
+    <div class="marquee-item">🧀 Artisan Cheese <span class="marquee-dot"></span></div>
+    <div class="marquee-item">🍦 Premium Ice Cream <span class="marquee-dot"></span></div>
+    <div class="marquee-item">🧈 Cultured Butter <span class="marquee-dot"></span></div>
+    <div class="marquee-item">🫙 Greek Yogurt <span class="marquee-dot"></span></div>
+    <div class="marquee-item">🥛 Organic Cream <span class="marquee-dot"></span></div>
+    <div class="marquee-item">🧀 Paneer <span class="marquee-dot"></span></div>
+    <div class="marquee-item">🍼 Baby Dairy <span class="marquee-dot"></span></div>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="section-label">Our Products</div>
+  <h2 class="section-title">Crafted with <em>care</em>,<br>delivered fresh.</h2>
+  <div class="products-grid">
+    <div class="product-card reveal">
+      <span class="badge">Best Seller</span>
+      <div class="product-emoji"><img src="product pics/Farm Fresh Milk.jfif" alt=""></div>
+      <div class="product-tag">Whole Milk</div>
+      <div class="product-name">Farm Fresh Milk</div>
+      <div class="product-desc">Pasteurized, non-homogenized whole milk from grass-fed cows. Rich and creamy.</div>
+      <div class="product-footer">
+        <div class="product-price">₹68 <span>/ litre</span></div>
+        <button class="add-btn" onclick="addToCart('Farm Fresh Milk')">+</button>
+      </div>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-emoji"><img src="product pics/Artisan Paneer.jfif" alt=""></div>
+      <div class="product-tag">Cheese</div>
+      <div class="product-name">Artisan Paneer</div>
+      <div class="product-desc">Hand-pressed fresh paneer made daily. Soft, creamy, and perfect for cooking.</div>
+      <div class="product-footer">
+        <div class="product-price">₹89 <span>/ 250g</span></div>
+        <button class="add-btn" onclick="addToCart('Artisan Paneer')">+</button>
+      </div>
+    </div>
+    <div class="product-card reveal">
+      <span class="badge">New</span>
+      <div class="product-emoji"><img src="product pics/Greek Dahi.jfif" alt=""></div>
+      <div class="product-tag">Yogurt</div>
+      <div class="product-name">Greek Dahi</div>
+      <div class="product-desc">Thick, strained yogurt with live cultures. High protein, zero added sugar.</div>
+      <div class="product-footer">
+        <div class="product-price">₹75 <span>/ 400g</span></div>
+        <button class="add-btn" onclick="addToCart('Greek Dahi')">+</button>
+      </div>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-emoji"><img src="product pics/White Butter.jfif" alt=""></div><span class="product-emoji">🧈</span>
+      <div class="product-tag">Butter</div>
+      <div class="product-name">White Butter</div>
+      <div class="product-desc">Traditional hand-churned makhan from cultured cream. Unsalted and pure.</div>
+      <div class="product-footer">
+        <div class="product-price">₹120 <span>/ 200g</span></div>
+        <button class="add-btn" onclick="addToCart('White Butter')">+</button>
+      </div>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-emoji"><img src="product pics/Ghee.jpg" alt=""></div>
+      <div class="product-tag">Clarified Butter</div>
+      <div class="product-name">Pure Ghee</div>
+      <div class="product-desc">Slow-cooked A2 cow ghee with a rich golden colour and nutty aroma.</div>
+      <div class="product-footer">
+        <div class="product-price">₹650 <span>/ 500ml</span></div>
+        <button class="add-btn" onclick="addToCart('Pure Ghee')">+</button>
+      </div>
+    </div>
+    <div class="product-card reveal">
+      <span class="badge">Organic</span>
+      <div class="product-emoji"><img src="product pics/Mango Lassi.jfif" alt=""></div>
+      <div class="product-tag">Drink</div>
+      <div class="product-name">Mango Lassi</div>
+      <div class="product-desc">Blended with Alphonso mangoes and our homestyle dahi. Chilled and refreshing.</div>
+      <div class="product-footer">
+        <div class="product-price">₹55 <span>/ 250ml</span></div>
+        <button class="add-btn" onclick="addToCart('Mango Lassi')">+</button>
+      </div>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-emoji"><img src="product pics/Malai Kulfi.jfif" alt=""></div>
+      <div class="product-tag">Frozen</div>
+      <div class="product-name">Malai Kulfi</div>
+      <div class="product-desc">Slow-frozen traditional kulfi with saffron and cardamom. A timeless classic.</div>
+      <div class="product-footer">
+        <div class="product-price">₹40 <span>/ piece</span></div>
+        <button class="add-btn" onclick="addToCart('Malai Kulfi')">+</button>
+      </div>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-emoji"><img src="product pics/Fresh Cream.jfif" alt=""></div>
+      <div class="product-tag">Cream</div>
+      <div class="product-name">Fresh Cream</div>
+      <div class="product-desc">35% fat whipping cream from single-origin farm. Perfect for desserts and coffee.</div>
+      <div class="product-footer">
+        <div class="product-price">₹95 <span>/ 200ml</span></div>
+        <button class="add-btn" onclick="addToCart('Fresh Cream')">+</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="section-header">
+    <div>
+      <div class="section-label">Reviews</div>
+      <h2 class="section-title" style="margin-bottom:0">Loved by<br><em>families</em> everywhere.</h2>
+    </div>
+    <a href="#" class="btn-ghost" style="flex-shrink:0">All Reviews <span class="arrow">→</span></a>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card reveal">
+      <div class="stars">★★★★★</div>
+      <p class="testi-text">"The ghee is absolutely incredible. You can smell the difference the moment you open the jar — that rich, nutty aroma takes me right back to my grandmother's kitchen."</p>
+      <div class="testi-author">
+        <div class="author-avatar">P</div>
+        <div>
+          <div class="author-name">Priya Sharma</div>
+          <div class="author-loc">Ludhiana, Punjab</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card reveal">
+      <div class="stars">★★★★★</div>
+      <p class="testi-text">"We switched to DairyFresh for our kids six months ago and haven't looked back. The milk tastes completely different — pure and real. I love that it comes in glass bottles."</p>
+      <div class="testi-author">
+        <div class="author-avatar">R</div>
+        <div>
+          <div class="author-name">Rajesh Kapoor</div>
+          <div class="author-loc">Chandigarh</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card reveal">
+      <div class="stars">★★★★★</div>
+      <p class="testi-text">"As a chef, I'm very particular about ingredients. Their paneer holds its shape beautifully when cooked and the cream whips perfectly every time. Top quality."</p>
+      <div class="testi-author">
+        <div class="author-avatar">A</div>
+        <div>
+          <div class="author-name">Arjun Mehta</div>
+          <div class="author-loc">Amritsar</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+       <a href="index.html" class="logo">
+    <div class="logo-icon">
+      <img src="product pics/ChatGPT Image Jun 5, 2026, 11_29_24 AM.png" alt="">
+    </div>
+  </a>
+      <p>From the farms of Punjab to your doorstep. Bringing you the purest dairy since 2018.</p>
+      <div class="footer-socials">
+        <a class="social-btn" href="#">f</a>
+        <a class="social-btn" href="#">in</a>
+        <a class="social-btn" href="#">𝕏</a>
+        <a class="social-btn" href="#">📷</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <ul>
+        <li><a href="#">Fresh Milk</a></li>
+        <li><a href="#">Cheese & Paneer</a></li>
+        <li><a href="#">Yogurt & Dahi</a></li>
+        <li><a href="#">Butter & Ghee</a></li>
+        <li><a href="#">Ice Cream</a></li>
+        <li><a href="#">Beverages</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">Our Story</a></li>
+        <li><a href="#">Farm Partners</a></li>
+        <li><a href="#">Sustainability</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Press</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#">Order Tracking</a></li>
+        <li><a href="#">Subscriptions</a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 DairyFresh. All rights reserved. Made with 🤍 in Punjab.</p>
+    <div class="footer-badges">
+      <div class="badge-cert">🌿 FSSAI Certified</div>
+      <div class="badge-cert">🏆 ISO 22000</div>
+      <div class="badge-cert">🐄 Organic India</div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- AUTH MODAL -->
+<div class="auth-overlay" id="authOverlay" onclick="handleOverlayClick(event)">
+  <div class="auth-modal" id="authModal">
+    <button class="auth-close" onclick="closeAuth()" aria-label="Close">✕</button>
+    <div class="auth-tabs">
+      <button class="auth-tab active" id="tabLogin" onclick="switchTab('login')">Login</button>
+      <button class="auth-tab" id="tabSignup" onclick="switchTab('signup')">Sign Up</button>
+    </div>
+
+    <!-- LOGIN PANEL -->
+    <div class="auth-panel active" id="panelLogin">
+      <div class="auth-title">Welcome back 👋</div>
+      <p class="auth-sub">Sign in to manage your orders, subscriptions, and exclusive offers.</p>
+      <div class="auth-error" id="loginError"></div>
+      <div class="auth-form">
+        <input type="email" id="authEmail" placeholder="Email address" autocomplete="email">
+        <input type="password" id="authPassword" placeholder="Password" autocomplete="current-password">
+        <button class="btn-primary" onclick="handleAuthLogin()">Login →</button>
+      </div>
+      <p class="auth-divider">Don't have an account? <a onclick="switchTab('signup')">Sign up free</a></p>
+    </div>
+
+    <!-- SIGNUP PANEL -->
+    <div class="auth-panel" id="panelSignup">
+      <div class="auth-title">Join DairyFresh 🌿</div>
+      <p class="auth-sub">Create your account and get 10% off your first order.</p>
+      <div class="auth-error" id="signupError"></div>
+      <div class="auth-form">
+        <div class="input-row">
+          <input type="text" id="signupFirst" placeholder="First name" autocomplete="given-name">
+          <input type="text" id="signupLast" placeholder="Last name" autocomplete="family-name">
+        </div>
+        <input type="email" id="signupEmail" placeholder="Email address" autocomplete="email">
+        <input type="password" id="signupPassword" placeholder="Password (min 8 chars)" autocomplete="new-password">
+        <input type="password" id="signupConfirm" placeholder="Confirm password" autocomplete="new-password">
+        <button class="btn-primary" onclick="handleAuthSignup()">Create Account →</button>
+      </div>
+      <p class="auth-divider">Already have an account? <a onclick="switchTab('login')">Login</a></p>
+    </div>
+
+    <!-- SUCCESS STATE -->
+    <div class="auth-panel" id="panelSuccess">
+      <div class="auth-success">
+        <div class="auth-success-icon">🎉</div>
+        <h3 id="successTitle">You're in!</h3>
+        <p id="successMsg">Welcome back to DairyFresh.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cart-toast" id="cartToast">🛒 <span id="cartMsg">Added to cart!</span></div>
+<script src="script.js"></script>
+</body>
+</html>
